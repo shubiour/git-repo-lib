@@ -26,11 +26,11 @@ void searchRepositories(String keyword) async {
     if (limitedRepositories.isEmpty) {
       Get.dialog(
         AlertDialog(
-          title: Text('No Results Found'),
-          content: Text('No repositories were found for the provided keyword.'),
+          title: const Text('No Results Found'),
+          content: const Text('No repositories were found for the provided keyword.'),
           actions: [
             TextButton(
-              child: Text('OK'),
+              child: const Text('OK'),
               onPressed: () {
                 Get.back();
               },

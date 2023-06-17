@@ -15,15 +15,15 @@ class SearchScreen extends StatelessWidget {
         title: const Text('Search'),
         actions: [
           PopupMenuButton<SortOption>(
-            icon: Icon(Icons.sort),
+            icon: const Icon(Icons.sort),
             itemBuilder: (context) => [
               const PopupMenuItem(
-                child: Text('Sort by Last Updated'),
                 value: SortOption.lastUpdated,
+                child: Text('Sort by Last Updated'),
               ),
-              PopupMenuItem(
-                child: Text('Sort by Stars'),
+              const PopupMenuItem(
                 value: SortOption.stars,
+                child: Text('Sort by Stars'),
               ),
             ],
             onSelected: (SortOption selectedOption) {
@@ -33,11 +33,11 @@ class SearchScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextField(
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Search',
               ),
               onSubmitted: (value) {

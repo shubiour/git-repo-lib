@@ -9,7 +9,7 @@ class AppRoutes {
   static List<GetPage> routes() {
     return [
       GetPage(name: search, page: () => SearchScreen()),
-      GetPage(name: details, page: () => DetailsScreen()),
+      GetPage(name: details, page: () => const DetailsScreen()),
     ];
   }
 }
