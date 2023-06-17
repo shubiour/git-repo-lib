@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:get/get.dart';
 import '../Model/repository.dart';
 
@@ -6,6 +7,8 @@ class DetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Repository repository = Get.arguments as Repository;
+
+    String formattedLastUpdated = DateFormat('MM-dd-yyyy HH:mm:ss').format(repository.lastUpdated);
 
     return Scaffold(
       appBar: AppBar(
@@ -54,7 +57,7 @@ class DetailsScreen extends StatelessWidget {
             ),
             SizedBox(height: 8.0),
             Text(
-              'Last Updated: ${repository.lastUpdated.toString()}',
+              'Last Updated: $formattedLastUpdated',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
           ],
