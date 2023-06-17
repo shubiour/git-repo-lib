@@ -3,7 +3,8 @@ import 'package:get/get.dart';
 import '../Controller/repository_controller.dart';
 
 class SearchScreen extends StatelessWidget {
-  final RepositoryController repositoryController = Get.find<RepositoryController>();
+  final RepositoryController repositoryController =
+      Get.find<RepositoryController>();
 
   SearchScreen({super.key});
 
@@ -45,15 +46,21 @@ class SearchScreen extends StatelessWidget {
             ),
             Obx(
               () => repositoryController.isLoading.value
-                  ? CircularProgressIndicator()
+                  ? const Expanded(
+                    child: Center(
+                        child: CircularProgressIndicator(),
+                      ),
+                  )
                   : Expanded(
                       child: ListView.builder(
                         itemCount: repositoryController.repositories.length,
                         itemBuilder: (context, index) {
-                          final repository = repositoryController.repositories[index];
+                          final repository =
+                              repositoryController.repositories[index];
                           return ListTile(
                             leading: CircleAvatar(
-                              backgroundImage: NetworkImage(repository.ownerAvatarUrl),
+                              backgroundImage:
+                                  NetworkImage(repository.ownerAvatarUrl),
                             ),
                             title: Text(repository.name),
                             subtitle: Text(repository.description),
