@@ -1,0 +1,32 @@
+.gradle
+**/build/
+!src/**/build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# Eclipse Gradle plugin generated files
+# Eclipse Core
+.project
+# JDT-specific (Eclipse Java Development Tools)
+.classpath
+
+# Flutter/Dart specific files
+**/doc/api/
+**/*.iml
+**/*.lock
+**/ios/Pods/
+**/android/build/
+**/android/app/build/
+**/.dart_tool/
+**/.idea/
+**/*.log
+**/build/
+.flutter-plugins
+.flutter-plugins-dependencies
